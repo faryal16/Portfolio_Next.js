@@ -6,11 +6,10 @@ import {
   FaJs,
   FaReact,
   FaFigma,
-  FaNodeJs,
   FaPython ,
 } from "react-icons/fa";
 import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
-import { LiaPython } from "react-icons/lia"
+
 
 // about data
 
