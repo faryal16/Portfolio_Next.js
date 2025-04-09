@@ -7,8 +7,10 @@ import {
   FaReact,
   FaFigma,
   FaNodeJs,
+  FaPython ,
 } from "react-icons/fa";
 import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
+import { LiaPython } from "react-icons/lia"
 
 // about data
 
@@ -30,16 +32,51 @@ const about = {
       fieldValue: "10+ Years",
     },
     {
-      fieldName: "LinkedIn",
-      fieldValue: "Faryal Junaid",
+      fieldName: "Email",
+      fieldValue: "bintefarzana1992@gmail.com",
     },
     {
       fieldName: "Nationality",
       fieldValue: "pakistani",
     },
     {
-      fieldName: "Email",
-      fieldValue: "bintefarzana1992@gmail.com",
+      fieldName: "LinkedIn",
+      fieldValue: (
+        <a 
+          href="https://www.linkedin.com/in/faryal-junaid-06780b2b4/"
+          target="_blank" 
+          rel="noopener noreferrer"
+          style={{ textDecoration: "none", color: "inherit" }}
+        >
+          Faryal Junaid
+        </a>
+      ),
+    },
+    {
+      fieldName: "GitHub",
+      fieldValue: (
+        <a 
+          href="https://github.com/faryal16"
+          target="_blank" 
+          rel="noopener noreferrer"
+          style={{ textDecoration: "none", color: "inherit" }}
+        >
+          faryal16
+        </a>
+      ),
+    },
+    {
+      fieldName: "Twitter",
+      fieldValue: (
+        <a 
+          href="https://x.com/faryal_jb143?t=oLBnYXTJam7-70gzGBUR1g&s=09"
+          target="_blank" 
+          rel="noopener noreferrer"
+          style={{ textDecoration: "none", color: "inherit" }}
+        >
+          faryal_jb143
+        </a>
+      ),
     },
     {
       fieldName: "Freelance",
@@ -129,6 +166,10 @@ const skills = {
     "Technical skills are the specialized knowledge and expertise required to perform specific tasks and use specific tools and programs in real-world situations.",
   skillList: [
     {
+      icon: <FaPython />,
+      name: "Python"
+    },
+    {
       icon: <FaHtml5 />,
       name: "html 5",
     },
@@ -143,10 +184,6 @@ const skills = {
     {
       icon: <FaReact />,
       name: "react.js",
-    },
-    {
-      icon: <FaNodeJs />,
-      name: "node.js",
     },
     {
       icon: <FaFigma />,
@@ -173,6 +210,7 @@ import {
 import { ScrollArea } from "@/components/ui/scroll-area";
 import {  motion } from "framer-motion";
 
+
 const Resume = () => {
   return (
     <motion.div
@@ -197,7 +235,7 @@ const Resume = () => {
           {/* experience */}
           <TabsContent value="experience" className="w-full" >
       <div className="flex flex-col  gap-[30px] text-center xl:text-left ">
-        <h3 className="text-4xl font-bold">{experience.title}</h3>
+        <h3 className="text-4xl font-bold text-accent hover:underline">{experience.title}</h3>
         <p className="max-w-[600px] text/white/60 mx-auto xl:m-0 " >{experience.description}</p>
         <ScrollArea className="h-[400px]" >
           <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]" >
@@ -225,7 +263,7 @@ const Resume = () => {
           {/* education */}
           <TabsContent value="education" className="w-full" >
           <div className="flex flex-col  gap-[30px] text-center xl:text-left ">
-        <h3 className="text-4xl font-bold">{education.title}</h3>
+        <h3 className="text-4xl font-bold text-accent hover:underline">{education.title}</h3>
         <p className="max-w-[600px] text/white/60 mx-auto xl:m-0 " >{education.description}</p>
         <ScrollArea className="h-[400px]" >
           <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]" >
@@ -254,7 +292,7 @@ const Resume = () => {
           <TabsContent value="skills" className="w-full h-full" >
             <div className="flex flex-col gap-[30px]">
               <div className="flex flex-col gap-[30px] text-center xl:text-left ">
-                <h3 className="text-4xl text-bold">{skills.title}</h3>
+                <h3 className="text-4xl text-bold text-accent hover:underline  ">{skills.title}</h3>
                 <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{skills.description}</p>
               </div>
               <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px] ">
@@ -267,7 +305,7 @@ const Resume = () => {
                             <div className="text-6xl group-hover:text-accent transition-all duration-300 ">{skill.icon}</div>
                           </TooltipTrigger>
                           <TooltipContent>
-                            <p className="capitalize">{skill.name}</p>
+                            <p className="capitalize text-xl text-accent">{skill.name}</p>
                           </TooltipContent>
                         </Tooltip>
                       </TooltipProvider>
@@ -281,7 +319,7 @@ const Resume = () => {
           {/* about */}
           <TabsContent value="about" className="w-full text-center xl:text-left" >
             <div className="flex flex-col gap-[30px]">
-              <h3 className="text-4xl font-bold">{about.title}</h3>
+              <h3 className="text-4xl font-bold text-accent hover:underline">{about.title}</h3>
             <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
             {about.description}
             </p>
@@ -290,7 +328,7 @@ const Resume = () => {
                 return (
                   <li key={index} className="flex items-center justify-center xl:justify-start gap-4">
 <span className="text-white/60">{item.fieldName}</span>
-<span className="text-xl">{item.fieldValue}</span>
+<span className="text-xl hover:underline hover:text-accent">{item.fieldValue}</span>
                   </li>
                 )
               })}

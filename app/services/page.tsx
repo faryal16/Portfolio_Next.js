@@ -6,27 +6,41 @@ import { motion } from "framer-motion";
 const services = [
   {
     num: "01",
-    title: "Web Development",
+    title: "Frontend Developer",
+    description:
+      "As a frontend developer, I craft intuitive user interfaces using technologies like HTML, CSS, JavaScript, React, Next.js, and Tailwind CSS. My focus is on creating fast, responsive, and accessible web experiences that users love.",
+    href: "",
+  },
+  {
+    num: "02",
+    title: "Aspiring Python Developer",
+    description:
+      "As a Python developer, I build efficient scripts, automation tools, and backend logic. I’m familiar with core Python programming, working with data structures, modules, and functions—while also exploring AI and backend development.",
+    href: "",
+  },
+  {
+    num: "03",
+    title: "Junior Web Development",
     description:
       "Web development is the process of building, programming, and maintaining websites and web applications. Website developers use various programming languages, like HTML, CSS, and JavaScript, to develop websites and web applications. Keep Reading Learn More About Web Design and Development.",
     href: "",
   },
   {
-    num: "02",
+    num: "04",
     title: "Graphic Design",
     description:
       "Graphic design is a profession, academic discipline and applied art whose activity consists in projecting visual communications intended to transmit specific messages to social groups, with specific objectives. Graphic design is an interdisciplinary branch of design and of the fine arts.",
     href: "",
   },
   {
-    num: "03",
+    num: "05",
     title: "Teaching",
     description:
       "Teaching is the practice implemented by a teacher aimed at transmitting skills (knowledge, know-how, and interpersonal skills) to a learner, a student, or any other audience in the context of an educational institution. Teaching is closely related to learning, the student's activity of appropriating this knowledge.",
     href: "",
   },
   {
-    num: "04",
+    num: "06",
     title: "UI/UX Designer",
     description:
       "UI designers work on individual pages, buttons, and interactions; making sure they are polished and functional. UX designers take a more high-level view of a product or service, ensuring the collective user flow of a site, service, or app is fully realized and consistent.",
